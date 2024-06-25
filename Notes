@@ -51,7 +51,12 @@ Layer 2 in blockchain refers to a secondary framework or protocol that is built 
 Key Characteristics
 Layer 2 protocols are built on top of a Layer 1 blockchain, inheriting its security guarantees.
 They often run with smart contracts on their underlying blockchain.
-Layer 2 solutions compromise on decentralization and security to achieve speed, making it more risky to store funds on them.      
+Layer 2 solutions compromise on decentralization and security to achieve speed, making it more risky to store funds on them.  
+Why can’t I add Solana to MetaMask?
+MetaMask is built specifically for Ethereum and Ethereum Virtual Machine (EVM) compatible chains. In other words, MetaMask is built only for blockchains that can run Ethereum smart contracts. 
+Because Solana is not EVM-compatible, MetaMask does not support the ability to hold and trade Solana-based assets. 
+Phantom 
+Phantom is the most popular software wallet built specifically for the Solana blockchain. Some users even call Phantom the MetaMask of the Solana blockchain! Phantom features a browser extension application and other user-friendly features — like a built-in decentralized exchange and the ability to stake SOL. 
 14.SOLIDITY
  2 ways to store variables--memeory,stroage
 memeory-data will only be stored during the execution of the function
