@@ -1,2 +1,5 @@
 JSON Introduction
 When storing data, the data has to be a certain format, and regardless of where you choose to store it, text is always one of the legal formats. JSON makes it possible to store JavaScript objects as text.
+JavaScript Object Notation (JSON) is a standard data format that's often used to exchange data between web applications and servers. It's text-based, so it can be read by both humans and computers, and it's independent of any programming language. This makes JSON ideal for exchanging data across different platforms and programming languages. 
+
+JavaScript Object Notation (JSON) is a standard data format that's often used to exchange data between web applications and servers. It's text-based, so it can be read by both humans and computers, and it's independent of any programming language. This makes JSON ideal for exchanging data across different platforms and programming languages
