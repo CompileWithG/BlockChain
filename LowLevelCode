@@ -1,0 +1,9 @@
+What is low level code
+Low-level code refers to the lowest level of coding in a programming language that is closest to the machine language of a computer. It provides little or no abstraction from a computer’s instruction set architecture, meaning that the commands or functions in the language are structurally similar to the processor’s instructions.
+
+Types of Low-Level Code
+
+There are two main types of low-level code:
+
+-Machine Code: This is the binary code that a computer’s processor can execute directly. It is made up of 0s and 1s and is specific to a particular type of computer architecture.
+-Assembly Language: This is a human-readable representation of machine code, using symbolic codes and mnemonics to represent the binary code. It is still low-level, but easier to read and write than machine code.
