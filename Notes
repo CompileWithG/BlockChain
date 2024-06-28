@@ -62,5 +62,20 @@ Phantom is the most popular software wallet built specifically for the Solana bl
 memeory-data will only be stored during the execution of the function
 storage-data will remain even after the function is executed
 2.mapping() -- a dictionary like data structure with one value per key
-
-                                                 
+3.everytime we interact with a contract we need to things ,its adress and ABI(application binary interface
+Application Binary Interface (ABI): A software interface between two binary program modules, typically a library or operating system facility and a user program. An ABI defines how data structures or computational procedures are used to communicate between these modules.
+---The ABI tells solidity and othe rprogramming languages how to interact with another samrt contract
+----Anytime you want to interact with another already deployed smart contract you need and ABI
+4.The Orcale problem:-smart contracts are unable to connect with external systems,data feeds,API's
+5.Interface complie down to a ABI
+6.integers can wrap around after  raeching the limit unit8(initial value 255) will go to 0 if we add 1 to 255 
+7.revert and require(like pass and break
+8.transfer function can be used to send money between addresses,msg.sender.transfer(adress(this).balance)
+9.adress(this).balance ,this points to the contract we are currently in
+10.constructor () public{
+}
+constructor is  called when contract is deployed
+11.address is a datatype
+12.modifier is used to change the behaviour of a function in a declarative way.
+13.web3.py is a python libraray to interact  with ethererum
+14.brownie -smar contract development framework built on web3.py
