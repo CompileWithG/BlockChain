@@ -3,3 +3,5 @@ Environment Variables are key-value pairs configured outside your source code so
 for example:we create  environment variables instead of hard coding the private key of a crypto wallet to avaoid breach of information
 
 private_key=os.getenv("PRIVATE_KEY")
+we can store all environment variables in a .env file
+make sure to add the .env file to .gitignore
