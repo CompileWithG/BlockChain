@@ -1,0 +1,3 @@
+What is the environment variable?
+Environment Variables are key-value pairs configured outside your source code so that each value can change depending on the Environment. Your source code can read these values to change behavior during the Build Step or during Function execution.
+for example:we create  environment variables instead of hard coding the private key of a crypto wallet to avaoid breach of information
