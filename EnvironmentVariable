@@ -5,3 +5,6 @@ for example:we create  environment variables instead of hard coding the private 
 private_key=os.getenv("PRIVATE_KEY")
 we can store all environment variables in a .env file
 make sure to add the .env file to .gitignore
+pip install python-dotenv
+from dotenv import load_dotenv
+load_dotenv()--automatically loads the .env file in which all environment vairables are there into the code
