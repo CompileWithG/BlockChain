@@ -78,4 +78,10 @@ constructor is  called when contract is deployed
 11.address is a datatype
 12.modifier is used to change the behaviour of a function in a declarative way.
 13.web3.py is a python libraray to interact  with ethererum
-14.brownie -smar contract development framework built on web3.py
+14.brownie -smart contract development framework built on web3.py
+15.two types to interact with contract:
+--transact and call
+call-simulates a call and gets areturn value
+--transact--makees a state change
+16.brownie is built on web3.py
+web3.py code can we written in even easier format using brownie
