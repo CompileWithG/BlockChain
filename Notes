@@ -85,3 +85,34 @@ call-simulates a call and gets areturn value
 --transact--makees a state change
 16.brownie is built on web3.py
 web3.py code can we written in even easier format using brownie
+16.Chainlink price feeds are smart contracts that provide the price of an asset in USD. They use a decentralized model to aggregate data from many sources, such as exchanges, through a network of independent node operators:
+17.What are dependencies
+Dependencies are relationships between tasks, activities, or products that require input from other tasks, activities, or products to be completed. They are essential in project management, software development, and other fields where multiple components or tasks need to be coordinated.
+18.enums are a way to create user defined type sin solidity,enums are explicitily convertible to and from all integer types
+19.Chainlink is a decentralized computing platform and cryptocurrency that allows non-blockchain businesses to securely connect with blockchain platforms. It acts as a bridge between the blockchain and the outside world, allowing smart contracts to access real-world data and events
+20.we can fork blockchain networks to test and deploy on them
+21.brownie chainlink mix
+21.ERC-20 i a blueprint for creating fungible tokens
+22.Ethereum Request for Comment 20 (ERC20) is a standard for creating fungible tokens on the Ethereum blockchain. It's a set of rules and functions that tokens must follow to ensure they work properly within the Ethereum ecosystem.
+23.Tokens can be made out of a smart contract ,some amount of ether is send to the contract,then the contract makes token out of that currency .ERC20  is a guidline to write token contracts.
+https://youtu.be/cqZhNzZoMh8?si=O-mp3ZwhSVub5660
+24.similarly ERC-721 is a standard guidlinde for NFTS
+25.openzepplin
+26.Aave is a decentralized crypto lending platform that lets users borrow and lend crypto. Aave uses smart contracts to automate the process.
+Aave
+Aave is also the name of a DeFi protocol that automates lending with smart contracts. The protocol allows users to borrow assets at interest, with flexible repayment terms and interest rates that adjust based on asset utilization
+27.aETH-interest bearing token
+28.aave also uses chainlink price feeds
+29.testrnet.aave.com
+30.app.aave.com
+31.WETH is the ERC20 version of ETH
+32.A DeFi protocol is a set of rules, codes, and procedures that govern systems of lending, borrowing, and trading cryptocurrencies. DeFi protocols are embodied in smart contracts on Ethereum and other programmable blockchains. They are designed to address issues related to the traditional finance industry, such as lack of access to financial services for the unbanked and underbanked population.
+
+DeFi protocols are specialized autonomous programs that enable peer-to-peer transactions, eliminating the need for intermediaries or custodians.\
+33.in testing files we use assert
+--arrange,act,assert
+34.NFTS use ERC721 standard
+35.semi fungible tokens -ERC1155
+36.ERC20 basically keeps track of the address and how much balance that address has , while ERC721 keeps track of the token ID and the owner of the token(address)
+it also has somethinbg called token URI
+37.token URI is  just a simplke API call
