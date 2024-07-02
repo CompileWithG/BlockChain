@@ -58,6 +58,9 @@ Because Solana is not EVM-compatible, MetaMask does not support the ability to h
 Phantom 
 Phantom is the most popular software wallet built specifically for the Solana blockchain. Some users even call Phantom the MetaMask of the Solana blockchain! Phantom features a browser extension application and other user-friendly features — like a built-in decentralized exchange and the ability to stake SOL. 
 14.SOLIDITY
+SPDX-License-Identifier: MIT
+pragma solidity ^0.6.0;
+(these two statements above are mandatory)
  2 ways to store variables--memeory,stroage
 memeory-data will only be stored during the execution of the function
 storage-data will remain even after the function is executed
@@ -75,6 +78,11 @@ Application Binary Interface (ABI): A software interface between two binary prog
 10.constructor () public{
 }
 constructor is  called when contract is deployed
+inheritence example:
+contract exaample is inheritedExample{//here example inherits inheritedExample
+
+}
+10.the brownie-config.yaml file is very important(store ur dependencies,networks,wallets etc here)
 11.address is a datatype
 12.modifier is used to change the behaviour of a function in a declarative way.
 13.web3.py is a python libraray to interact  with ethererum
@@ -105,6 +113,11 @@ Aave is also the name of a DeFi protocol that automates lending with smart contr
 28.aave also uses chainlink price feeds
 29.testrnet.aave.com
 30.app.aave.com
+from brownie import config,network,accounts
+(inside get_accounts())
+if network.show_active()=="development"
+       return accounts[0]
+30.The LendingPool contract is the main contract of the protocol(aave)(we use function from this contarct to deposit,borrow etc.). It exposes all the user-oriented actions that can be invoked using either Solidity or web3 libraries
 31.WETH is the ERC20 version of ETH
 32.A DeFi protocol is a set of rules, codes, and procedures that govern systems of lending, borrowing, and trading cryptocurrencies. DeFi protocols are embodied in smart contracts on Ethereum and other programmable blockchains. They are designed to address issues related to the traditional finance industry, such as lack of access to financial services for the unbanked and underbanked population.
 
@@ -116,3 +129,69 @@ DeFi protocols are specialized autonomous programs that enable peer-to-peer tran
 36.ERC20 basically keeps track of the address and how much balance that address has , while ERC721 keeps track of the token ID and the owner of the token(address)
 it also has somethinbg called token URI
 37.token URI is  just a simplke API call
+38.The VRF Coordinator is a contract deployed on a blockchain that checks the randomness of each random number returned from a random node. It is used in Chainlink’s VRF (Verifiable Random Function) system, which provides a secure and decentralized way to generate random numbers.
+39.import pytest
+inside function if we use pytest.skip() it skips the function.
+40.IPFS(Interplanetary file sharing system) a decentralized platform to store files.
+41.contractname[-1] gives its latest deployment.
+42.put an __init__.py file in scripts folder just in case to let the compiler know we are importing the files in between
+for example: from scripts.helpful_scripts import get_account()
+43.some keywords in solidity : payable,view ,public,internal,override,private,address,event emit,indexed,modifier,constructor
+44.The function selector in Solidity is a 4-byte identifier that Solidity uses to identify functions under the hood. It is how a Solidity contract knows which function you are trying to call in a transaction. The function selector is obtained by hashing the function’s signature, which is a combination of the function’s name and the types of parameters it takes, combined together as a string with no spaces.
+Here is an example of how to get the function selector in Solidity:
+---------------------------------------------------------------------------------------------
+pragma solidity 0.8.25;
+
+contract SelectorTest {
+    function foo() public {}
+
+    function getSelectorOfFoo() external pure returns (bytes4) {
+        return this.foo.selector;
+    }
+}
+-----------------------------------------------------------------------------------------------
+In this example, the getSelectorOfFoo function returns the 4-byte function selector of the foo function.
+
+You can also get the function selector by using the abi.encodeWithSignature function from the OpenZeppelin Solidity library:
+------------------------------------------------------------------------------------------
+pragma solidity 0.8.25;
+
+import "openzeppelin-solidity/contracts/utils/ABI.sol";
+
+contract SelectorTest {
+    function foo() public {}
+
+    function getSelectorOfFoo() external pure returns (bytes4) {
+        return ABI.encodeWithSignature("foo(address,uint256)");
+    }
+}
+----------------------------------------------------------------------------------------------------
+45.brownie bake chasinlink-mix
+   brownie bake upgardes-mix 
+we use these to get a more specialized boiler plate structure
+
+46.events allow us to store data on the blockchain ,events are used to note that something happend ,this ia cheap alternative that stroing as state variable.
+46.what is event in solidity
+Events in Solidity are inheritable members of a contract that store the arguments passed in transaction logs when emitted. These logs are stored on the blockchain and are accessible using the contract’s address until the contract is present on the blockchain. Events are used to inform the calling application about the current state of the contract, with the help of the logging facility of EVM.
+
+Events can be declared using the event keyword and can be called from any method by using its name and passing the required parameters. An event can be defined with indexed parameters, which allows for efficient filtering and retrieval of events by specific criteria.
+
+Here is an example of a Solidity program that demonstrates creating an event:
+------------------------------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.21;
+
+contract eventExample {
+    uint256 public value = 0;
+
+    event Increment(address indexed owner); //here indexed is used to filter our data from the front end.
+
+    function getValue(uint _a, uint _b) public {
+        emit Increment(msg.sender);
+        value = _a + _b;
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+In this example, the eventExample contract has a state variable value and an event Increment that is emitted when the getValue function is called. The emit statement is used to trigger the event, passing the msg.sender as an argument.
+
+Events are useful for logging important information about the contract’s state and can be used to trigger specific logic in other contracts or applications.
+47.Truffle is a development framework and toolset for building decentralized applications (dApps) on the Ethereum blockchain
