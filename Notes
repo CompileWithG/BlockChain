@@ -195,3 +195,32 @@ In this example, the eventExample contract has a state variable value and an eve
 
 Events are useful for logging important information about the contract’s state and can be used to trigger specific logic in other contracts or applications.
 47.Truffle is a development framework and toolset for building decentralized applications (dApps) on the Ethereum blockchain
+48.nested mapping :
+for example:
+mapping token address->staker address->amount
+mapping(address  =>mapping( address => uint256 )) public stakingBalance;
+updating the amount :
+stakingBalance[tokenAdrress][msg.sender]=stakingBalce[tokenAddress][ms.sender] + amount;
+49.We cant loop through a mapping.
+50.function addAllowTokens() internal{}
+here the internal keywor means only the contract in which the function is written can call it.
+51.AggregatorV3Interface is used to get price feeds of differenct token
+to do this:
+import aggregatorV3Interface from chainlink
+then 
+AggregatorV3Interface priceFeed=AggregatorV3Interface(_tokonAdddress)//getting the price for specific tokens.this line of code is used to make a contract named priceFeed.
+(,int256,,,)=priceFeed.latestRoundData();
+52.suppose u wanna transfer multiple tokens,call that tokens transfer function for example you wanna unstake the staked tokens then,
+IERC20(_tokenAdress).transfer(msg.sender,balance)//_tokenAdress is the address of the token we need to unstake.msg.sender is the address of the person calling the function,the above code will be inside unstakeTokens( function),
+53.to mock token inside contract directory we make a test directory and write .sol files for the tokens.(we just need to inherit erc20 after importing it  and the code the constructor )
+whenever we write the constructor of an  contract that is inheriting we also include parameters of contract inherited(for example ERC20("TOKEN NAME","TOKEN SYMBOL")
+this way our mock token is ready.
+54.ideally we want to test all contracts written in one way or another
+under tests directory go to unit directory and inside that  we make file tets_token_farm.py(in one python file we write different functions to test different function of solidity contract) to test the token farm contract(we check every function in the contract).
+in test we usually split it into three categories (arrange,act,assert)
+55.to compile and run scripts we use coomand brownie run pythonFileNmae.py
+56.to compile qand run tests we use brownie test pythonFileName.py
+if we want to tests only for a specific function we use brownie test -k pythonFunctionName
+57.useDapp is a framework/tool(its basically etheruem +React) for Dapp development
+58.most applications(Dapps) have different git repos for front end code  and the contracts code.
+it is best practise to have frontend code different from contracts.
